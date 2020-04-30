@@ -9,7 +9,7 @@ console.log(new Date)
 
 const displayDate = () => {
   const currentDate = new Date()
-  console.log(currentDate);
+  // console.log(currentDate);
 
  document.getElementById("display-element").innerHTML = currentDate; 
 }
@@ -49,20 +49,26 @@ document.getElementById("display-stringNum").innerHTML = numParsed;
   const data = document.getElementById("dataEntry").value;
     if (data === "null") {
       document.getElementById("display-type").innerHTML = "null";
+      document.getElementById("dataEntry").value = "";
     }
      else if (data === "true") {
       document.getElementById("display-type").innerHTML = "boolean";
+      document.getElementById("dataEntry").value = "";
     }
     else if (data === "false") {
       document.getElementById("display-type").innerHTML = "boolean";
+      document.getElementById("dataEntry").value = "";
     }
     else if (data === ""){
       document.getElementById("display-type").innerHTML = "undefined";
+      document.getElementById("dataEntry").value = "";
     }
     else if (data <= Number.MAX_VALUE){
       document.getElementById("display-type").innerHTML = "number";
+      document.getElementById("dataEntry").value = "";
     }else {
       document.getElementById("display-type").innerHTML = "NaN, " + typeof data;
+      document.getElementById("dataEntry").value = "";
     }
   }
 
@@ -82,6 +88,8 @@ const add = () => {
   num2 = parseInt(num2);
   let sum = num1 + num2;
   document.getElementById("display-add").innerHTML = sum;
+  document.getElementById("add1").value = "";
+  document.getElementById("add2").value = "";
 }
 
 
@@ -102,7 +110,16 @@ const bothTrue = () => {
   const thirdInput = document.getElementById("true3").value;
   const fourthInput = document.getElementById("true4").value;
   if (firstInput === secondInput && thirdInput === fourthInput){
-    document.getElementById("both").innerHTML = "BOTH are True!!!";  
+    document.getElementById("both").innerHTML = "BOTH are True!!!";
+    document.getElementById("true1").value = "";
+    document.getElementById("true2").value = "";
+    document.getElementById("true3").value = "";
+    document.getElementById("true4").value = "";
+  }else {
+    document.getElementById("true1").value = "";
+    document.getElementById("true2").value = "";
+    document.getElementById("true3").value = "";
+    document.getElementById("true4").value = "";
   }
 }
 
@@ -124,9 +141,22 @@ const oneTrue = () => {
   const fourthInput = document.getElementById("either4").value;
   if (firstInput === secondInput && thirdInput === fourthInput) {
     document.getElementById("either").innerHTML = "";
+    document.getElementById("either1").value = "";
+    document.getElementById("either2").value = "";
+    document.getElementById("either3").value = "";
+    document.getElementById("either4").value = "";
   }
   else if (firstInput === secondInput || thirdInput === fourthInput){
-    document.getElementById("either").innerHTML = "ONE is True!!!";  
+    document.getElementById("either").innerHTML = "ONE is True!!!";
+    document.getElementById("either1").value = "";
+    document.getElementById("either2").value = "";
+    document.getElementById("either3").value = "";
+    document.getElementById("either4").value = "";  
+  }else{
+    document.getElementById("either1").value = "";
+    document.getElementById("either2").value = "";
+    document.getElementById("either3").value = "";
+    document.getElementById("either4").value = "";
   }
 }
 
@@ -148,6 +178,15 @@ const notTrue = () => {
   const fourthInput = document.getElementById("not4").value;
   if (firstInput !== secondInput && thirdInput !== fourthInput) {
     document.getElementById("not").innerHTML = "LIAR!! LIAR!! pants on FIRE!!!";
+    document.getElementById("not1").value = "";
+    document.getElementById("not2").value = "";
+    document.getElementById("not3").value = "";
+    document.getElementById("not4").value = "";
+  }else {
+    document.getElementById("not1").value = "";
+    document.getElementById("not2").value = "";
+    document.getElementById("not3").value = "";
+    document.getElementById("not4").value = "";
   }
 }
 
