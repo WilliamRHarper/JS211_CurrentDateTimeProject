@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <title></title>
     <script src="main.js"></script>
+    <style>
+      .eitherOrAnd {
+        display: flex;
+      }
+      .equals{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+      }
+    </style>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -19,7 +30,6 @@
     </div>
     <hr/>
     <div id="display-stringNum"></div>
-    <div>
       <label for= "stringForNum">Type something</label>
       <input type="num" id="stringForNum" name="stringForNum"><br><br>
       <button onclick="stringToNum()">Number It!!</button>
@@ -30,6 +40,72 @@
       <label for= "dataEntry">Type a word or sentence, true, false, a number, null or just hit the button</label>
       <input type="text" id="dataEntry" name="dataEntry"><br><br>
       <button onclick="dataType()">Data Type</button>
+    </div>
+    <hr/>
+    <div id="display-add"></div>
+    <div>
+      <label for= "add1">Type a number</label>
+      <input type="number" id="add1" name="add1"><br><br>
+      <label for= "add2">Type another number</label>
+      <input type="number" id="add2" name="add2"><br><br>     
+      <button onclick="add()">Add</button>
+    </div>
+    <hr/>
+    <div id="both"></div>
+    <div class ="eitherOrAnd">
+      <label for= "true1">something</label>
+      <input type="text" id="true1" name="true1">
+      <div class ="equals">=</div>
+      <label for= "true2">something</label>
+      <input type="text" id="true2" name="true2"><br><br>
+    </div>
+    <div class ="eitherOrAnd">
+      <label for= "true3">something</label>
+      <input type="text" id="true3" name="true3">
+      <div class="equals">=</div>
+      <label for= "true4">something</label>
+      <input type="text" id="true4" name="true4"><br><br>
+    </div>
+    <div>         
+      <button onclick="bothTrue()">are "BOTH" True?</button>
+    </div>
+    <hr/>
+    <div id="either"></div>
+    <div class ="eitherOrAnd">
+      <label for= "either1">something</label>
+      <input type="text" id="either1" name="either1">
+      <div class ="equals">=</div>
+      <label for= "either2">something</label>
+      <input type="text" id="either2" name="either2"><br><br>
+    </div>
+    <div class ="eitherOrAnd">
+      <label for= "either3">something</label>
+      <input type="text" id="either3" name="either3">
+      <div class="equals">=</div>
+      <label for= "either4">something</label>
+      <input type="text" id="either4" name="either4"><br><br>
+    </div>
+    <div>         
+      <button onclick="oneTrue()">are "EITHER" True?</button>
+    </div>
+    <hr/>
+    <div id="not"></div>
+    <div class ="eitherOrAnd">
+      <label for= "not1">something</label>
+      <input type="text" id="not1" name="not1">
+      <div class ="equals">=</div>
+      <label for= "not2">something</label>
+      <input type="text" id="not2" name="not2"><br><br>
+    </div>
+    <div class ="eitherOrAnd">
+      <label for= "not3">something</label>
+      <input type="text" id="not3" name="not3">
+      <div class="equals">=</div>
+      <label for= "not4">something</label>
+      <input type="text" id="not4" name="not4"><br><br>
+    </div>
+    <div>         
+      <button onclick="notTrue()">are "BOTH" "NOT" True?</button>
     </div>
     <hr/>
   </body>

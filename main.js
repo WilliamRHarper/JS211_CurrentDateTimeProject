@@ -62,52 +62,94 @@ document.getElementById("display-stringNum").innerHTML = numParsed;
     else if (data <= Number.MAX_VALUE){
       document.getElementById("display-type").innerHTML = "number";
     }else {
-      document.getElementById("display-type").innerHTML = "NaN, " + typeof(data);
+      document.getElementById("display-type").innerHTML = "NaN, " + typeof data;
     }
   }
 
- 
+                   
 
   
 // Write a JavaScript program that adds 2 numbers together.
-const add = (num1, num2) => {
-  return num1 + num2;
-}
+// const add = (num1, num2) => {
+//   return num1 + num2;
+// }
 
-add(2,4);
+// add(2,4);
+const add = () => {
+  let num1 = document.getElementById("add1").value;
+  let num2 = document.getElementById("add2").value;
+  num1 = parseInt(num1);
+  num2 = parseInt(num2);
+  let sum = num1 + num2;
+  document.getElementById("display-add").innerHTML = sum;
+}
 
 
 
 // Write a JavaScript program that runs only when 2 things are true.
-const bothTrue = (x ,y) => {
-  if (x && y) {
-    return true;
+// const bothTrue = (x ,y) => {
+//   if (x && y) {
+//     return true;
+//   }
+// }
+
+// bothTrue(0, 4);
+// bothTrue(2, 4);
+const bothTrue = () => {
+  document.getElementById("both").innerHTML = "";
+  const firstInput = document.getElementById("true1").value;
+  const secondInput = document.getElementById("true2").value;
+  const thirdInput = document.getElementById("true3").value;
+  const fourthInput = document.getElementById("true4").value;
+  if (firstInput === secondInput && thirdInput === fourthInput){
+    document.getElementById("both").innerHTML = "BOTH are True!!!";  
   }
 }
-
-bothTrue(0, 4);
-bothTrue(2, 4);
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-const oneTrue = (x ,y) => {
-  if (x || y) {
-    return true;
+// const oneTrue = (x ,y) => {
+//   if (x || y) {
+//     return true;
+//   }
+// }
+
+// oneTrue(0,4);
+// oneTrue(0,0);
+const oneTrue = () => {
+  document.getElementById("either").innerHTML = "";
+  const firstInput = document.getElementById("either1").value;
+  const secondInput = document.getElementById("either2").value;
+  const thirdInput = document.getElementById("either3").value;
+  const fourthInput = document.getElementById("either4").value;
+  if (firstInput === secondInput && thirdInput === fourthInput) {
+    document.getElementById("either").innerHTML = "";
+  }
+  else if (firstInput === secondInput || thirdInput === fourthInput){
+    document.getElementById("either").innerHTML = "ONE is True!!!";  
   }
 }
 
-oneTrue(0,4);
-oneTrue(0,0);
 
 // Write a JavaScript program that runs when both things are not true.
-const notTrue = (x, y) => {
-  if (!x && !y) {
-    return false;
+// const notTrue = (x, y) => {
+//   if (!x && !y) {
+//     return false;
+//   }
+// }
+
+// notTrue(0, 0);
+// notTrue(0, 4);
+const notTrue = () => {
+  document.getElementById("not").innerHTML = "";
+  const firstInput = document.getElementById("not1").value;
+  const secondInput = document.getElementById("not2").value;
+  const thirdInput = document.getElementById("not3").value;
+  const fourthInput = document.getElementById("not4").value;
+  if (firstInput !== secondInput && thirdInput !== fourthInput) {
+    document.getElementById("not").innerHTML = "LIAR!! LIAR!! pants on FIRE!!!";
   }
 }
-
-notTrue(0, 0);
-notTrue(0, 4);
 
 // ***************************
 //         PART TWO
