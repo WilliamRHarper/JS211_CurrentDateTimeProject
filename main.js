@@ -20,7 +20,7 @@ const displayDate = () => {
 const numToString = () => {
  const element = document.getElementById("display-numString");
  const numString = "\"" + document.getElementById("numForString").value.toString() + "\"";
-
+ document.getElementById("numForString").value = "";
  element.innerHTML = numString;
 }
 
@@ -30,9 +30,15 @@ const numToString = () => {
 
 // Write a JavaScript program to convert a string to the number.
 const stringToNum = () => {
-const numString = document.getElementById("stringForNum").value;
-let numParsed = parseInt(numString);
-document.getElementById("display-stringNum").innerHTML = numParsed;
+document.getElementById("display-stringNum").innerHTML = "";
+let numString = document.getElementById("stringForNum").value;
+// let numParsed = parseInt(numString);
+numString = parseInt(numString);
+document.getElementById("display-stringNum").innerHTML = numString;
+document.getElementById("stringForNum").value = "";
+if (numString === "NaN"){
+   document.getElementById("stringForNum").value = "";  
+}
 }
 
 
